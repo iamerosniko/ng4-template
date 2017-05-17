@@ -1,1 +1,24 @@
 <h1>Hello {{name}}</h1>
+
+<ul>
+  <li *ngFor="let item of items; let i = index">
+    {{i}} {{item}}
+  </li>
+</ul>
+
+<div class="col-sm-4" *ngFor="let journey of Journey; let i = index">
+    <div class="journey_block">
+      <div class="icon-workflow">
+          <div class="view view-fourth">
+          <img src="{{ journey.imageName }}" alt="">
+          <div class="mask">
+              <a href="" class="info" data-target="#carousel-example-generic" [attr.data-slide-to]="i">Read More</a>
+          </div>
+          </div>
+          <h4 class="journey_title">
+          <a [href]="journey.journey_url" *ngIf="journey.journey_url != 'javascript:;' " class="float-shadow">
+              {{journey.title}}
+          </a>
+          </h4>
+      </div>
+  </div>

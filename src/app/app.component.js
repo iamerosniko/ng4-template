@@ -10,6 +10,10 @@ var core_1 = require("@angular/core");
 var AppComponent = (function () {
     function AppComponent() {
         this.name = 'Angular';
+        this.items = [];
+        this.Journey = [
+            "ImageName", "WIN_20170416_10_41_12_Pro.jpg"
+        ];
     }
     return AppComponent;
 }());
